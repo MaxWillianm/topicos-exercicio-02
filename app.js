@@ -3,14 +3,28 @@ const app = express();
 const { Aluno } = require("./models");
 const port = 3606;
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-  
 
-  const novoAluno = Aluno.create({
-      name: 'Vitor',
-      email: 'vitor@gmail.com'
-  })
+
+
+app.get("/", function(req, res){
+    res.send("Pagina sobre Alunos");
+  });
+
+  app.get("/acesso", function(req, res){
+    res.send("Acesse http://localhost:3606/cadastrar para cadastrar");
+  });
+
+app.get("/cadastrar", function(req, res){
+    res.send(novoAluno);
+  });
+
+   const novoAluno = Aluno.create({
+      name: 'Marcelo',
+      email: 'marcelo@gmail.com'
+  });
+
+app.get()
 console.log(novoAluno)
 
 app.listen(port, function () {
