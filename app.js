@@ -8,8 +8,8 @@ app.use(express.urlencoded({ extended: true }));
   
 
   const novoAluno = Aluno.create({
-      name: 'Mateus',
-      email: 'mateus@gmail.com'
+      name: 'Vitor',
+      email: 'vitor@gmail.com'
   })
 console.log(novoAluno)
 
